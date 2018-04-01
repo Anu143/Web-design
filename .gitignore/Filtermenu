@@ -1,0 +1,177 @@
+
+
+
+
+
+<div style="text-align:center;margin-top:25px;font-weight:bold;texxxt-decoration:none;">
+2
+  Visit <a href="https://themeshook.com/" px;target="_blank">My Blog</a>
+3
+</div>
+4
+<div class="muck-up">
+5
+  <div class="overlay"></div>
+6
+  <div class="top">
+7
+    <div class="nav">
+8
+      <span class="ion-android-menu"></span>
+9
+      <p>Timeline</p>
+10
+      <span class="ion-ios-more-outline"></span>
+11
+    </div>
+12
+    <div class="user-profile">
+13
+      <img src="https://raw.githubusercontent.com/arjunamgain/FilterMenu/master/images/profile.jpg">
+14
+      <div class="user-details">
+15
+        <h4>Arjun Amgain</h4>
+16
+        <p>Web/Front-end Designer</p>
+1
+      </div>
+18
+    </div>
+19
+  </div>
+20
+  <div class="clearfix"></div>
+21
+  <div class="filter-btn">
+22
+    <a id="one" href="#"><i class="ion-ios-checkmark-outline"></i></a>
+23
+    <a id="two" href="#"><i class="ion-ios-alarm-outline"></i></a>
+24
+    <a id="three" href="#"><i class="ion-ios-heart-outline"></i></a>
+25
+    <a id="all" href="#"><i class="ion-ios-star-outline"></i></a>
+26
+    <span class="toggle-btn ion-android-funnel"></span>
+27
+  </div>
+28
+  <div class="clearfix"></div>
+29
+  <div class="bottom">
+30
+    <div class="title">
+1
+html {
+2
+  background: url(https://raw.githubusercontent.com/arjunamgain/FilterMenu/master/images/bg.jpg) no-repeat center center fixed;
+3
+  -webkit-background-size: cover;
+4
+  -moz-background-size: cover;
+5
+  -o-background-size: cover;
+6
+  background-size: cover;
+7
+}
+8
+​
+9
+body {
+10
+  font: 300 14px/18px Roboto
+11
+}
+12
+​
+13
+*,
+14
+:after,
+15
+:before {
+16
+  box-sizing: border-box
+17
+}
+18
+​
+19
+.clearfix:after,
+20
+.clearfix:before {
+21
+  content: '';
+22
+  display: table
+23
+}
+24
+​
+25
+.clearfix:after {
+26
+  clear: both;
+1
+$(function() {
+2
+  $('.toggle-btn').click(function() {
+3
+    $('.filter-btn').toggleClass('open');
+4
+​
+5
+  });
+6
+​
+7
+  $('.filter-btn a').click(function() {
+8
+    $('.filter-btn').removeClass('open');
+9
+​
+10
+  });
+11
+​
+12
+});
+13
+​
+14
+$('#all').click(function() {
+15
+​
+16
+  $('ul.tasks li').slideDown(300);
+17
+​
+18
+});
+19
+​
+20
+$('#one').click(function() {
+21
+  $('.tasks li:not(.one)').slideUp(300, function() {
+22
+    $('.one').slideDown(300);
+23
+​
+24
+  });
+25
+});
+26
+​
+27
+$('#two').click(function() {
+28
+  $('.tasks li:not(.two)').slideUp(300, function() {
+
+Log InSign UpFork
+Full Page
+Details View
+1×   0.5×   0.25×
